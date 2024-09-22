@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Madly in Love on David and Lily</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Madly in Love on David and Lily</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>davidh83110@gmail.com (David and Lily)</managingEditor>
+    <webMaster>davidh83110@gmail.com (David and Lily)</webMaster>
+    <copyright>©David&amp;Lily</copyright>
+    <lastBuildDate>Thu, 22 Feb 2024 12:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PARIS</title>
+      <link>http://localhost:1313/paris/</link>
+      <pubDate>Mon, 19 Feb 2024 12:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/paris/</guid><media:content url="http://localhost:1313/paris/_S6A8204_hu2761118893626839817.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/paris/_S6A8204_hu2761118893626839817.jpg&quot; /&gt;
+          &lt;p&gt;Je t&#39;aime&lt;/p&gt;
+        </description></item>
+    <item>
+      <title>ZERMATT</title>
+      <link>http://localhost:1313/zermatt/</link>
+      <pubDate>Thu, 22 Feb 2024 12:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/zermatt/</guid><media:content url="http://localhost:1313/zermatt/_S6A9846_hu8753230607693355365.jpg" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/zermatt/_S6A9846_hu8753230607693355365.jpg&quot; /&gt;
+          &lt;p&gt;Forever memories and madly in love.&lt;/p&gt;
+        </description></item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/animals/cats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/animals/cats/</guid><description>&lt;no value&gt;</description></item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/animals/dogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/animals/dogs/</guid><description>&lt;no value&gt;</description></item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/fashion-beauty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/fashion-beauty/</guid><description>&lt;no value&gt;</description></item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/featured-album/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/featured-album/</guid><description>&lt;no value&gt;</description></item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>davidh83110@gmail.com (David and Lily)</author>
+      <guid>http://localhost:1313/imprint/</guid><description>&lt;no value&gt;</description></item>
+  </channel>
+</rss>

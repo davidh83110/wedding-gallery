@@ -1,0 +1,58 @@
+
+
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'David and Lily'
+copyright = "©David&Lily"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+timeZone = "Asia/Taipei"
+timeout = "120s"
+
+[params]
+  defaultTheme = "light"
+  # description = "Example site for hugo-theme-gallery"
+  # title = "My Gallery"
+  [params.author]
+    email = "davidh83110@gmail.com"
+    name = "David and Lily"
+  [params.socialIcons]
+    # facebook = "https://www.facebook.com/"
+    instagram = "https://www.instagram.com/"
+    # github = "https://github.com/nicokaiser/hugo-theme-gallery/"
+    # youtube = "https://www.youtube.com/"
+    email = "mailto:user@example.com"
+    #website = "https://example.com"
+    #mastodon = "https://example.com"
+    #pixelfed = "https://example.com"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.2"
+  [[module.imports]]
+    path = "hugo-theme-gallery"
+
+
+#[menu]
+#  [[menu.footer]]
+#    name = "GitHub"
+#    url = "https://github.com/nicokaiser/hugo-theme-gallery/"
+#    weight = 3
+
+#[services]
+#  [services.rss]
+#    limit = 100
