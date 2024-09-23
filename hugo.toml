@@ -19,16 +19,16 @@ timeout = "900s"
     name = "David and Lily"
   [params.socialIcons]
     # facebook = "https://www.facebook.com/"
-    instagram = "https://www.instagram.com/"
+    instagram = "https://www.instagram.com/davidh.110"
     # github = "https://github.com/nicokaiser/hugo-theme-gallery/"
     # youtube = "https://www.youtube.com/"
-    email = "mailto:user@example.com"
+    email = "mailto:davidh83110@gmail.com"
     #website = "https://example.com"
     #mastodon = "https://example.com"
     #pixelfed = "https://example.com"
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML"]
   page = ["HTML"]
   section = ["HTML"]
 
@@ -53,6 +53,3 @@ timeout = "900s"
 #    url = "https://github.com/nicokaiser/hugo-theme-gallery/"
 #    weight = 3
 
-#[services]
-#  [services.rss]
-#    limit = 100
