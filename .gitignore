@@ -3,5 +3,5 @@ package-lock.json
 .hugo_build.lock
 exampleSite/assets/jsconfig.json
 public/
-resources/_gen
+resources/
 .hugo_build.lock

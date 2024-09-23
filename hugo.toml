@@ -8,7 +8,7 @@ defaultContentLanguage = "en"
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 timeZone = "Asia/Taipei"
-timeout = "120s"
+timeout = "360s"
 
 [params]
   defaultTheme = "light"
@@ -33,7 +33,7 @@ timeout = "120s"
   section = ["HTML"]
 
 [imaging]
-  quality = 75
+  quality = 100
   resampleFilter = "CatmullRom"
   [imaging.exif]
     disableDate = false
