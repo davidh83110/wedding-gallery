@@ -169,7 +169,7 @@ main > section {
   background-attachment: fixed;
   /* This keeps the background image fixed in place while scrolling */
   color: var(--text-1);
-  background-size: contain;
+  background-size: 45%;
   background-position-x: center;
   background-position-y: 90%;
 }
