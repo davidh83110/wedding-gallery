@@ -10,6 +10,7 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 
 ---
+
 [Pre-Wedding Albums](./albums)
 ![invitation](../data/invitation.jpg)
 

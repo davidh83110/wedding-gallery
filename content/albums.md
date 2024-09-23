@@ -7,5 +7,5 @@ title: "Madly in Love"
 menu:
   main:
     name: ALBUMS
-    weight: 1
+    weight: 2
 ---
