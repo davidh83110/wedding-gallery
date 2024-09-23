@@ -163,6 +163,15 @@ main > section {
   margin: 3rem auto 4rem;
   padding-right: 5px;
   padding-left: 5px;
+
+  background-repeat: no-repeat;
+  background-image: url('../happy_background.png');
+  background-attachment: fixed;
+  /* This keeps the background image fixed in place while scrolling */
+  color: var(--text-1);
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: 90%;
 }
 
 section.galleries {
