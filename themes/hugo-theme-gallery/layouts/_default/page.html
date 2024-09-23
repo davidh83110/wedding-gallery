@@ -1,6 +1,14 @@
 {{ define "main" }}
-  {{ partial "title.html" . }}
-  <section class="prose">
+{{ partial "title.html" . }}
+<!-- <section class="prose">
     {{ .Content }}
-  </section>
+  </section> -->
+
+{{ partial "featured.html" . }}
+<section class="galleries">
+  {{ range where .Pages "Params.private" "ne" true }}
+  {{ partial "album-card.html" . }}
+  {{ end }}
+</section>
+
 {{ end }}

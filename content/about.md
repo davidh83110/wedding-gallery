@@ -1,10 +1,11 @@
 ---
 layout: page
 rss_ignore: true
-title: About
+description: "Paris & Zermatt, Feb 2024"
+#lastmod: 2023-07-05
+title: "Madly in Love"
 menu:
   main:
-    weight: 90
+    name: ALBUMS
+    weight: 1
 ---
-
-![invitation](../data/invitation.jpg)
