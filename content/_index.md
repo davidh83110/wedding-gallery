@@ -11,6 +11,5 @@ menus:
 
 ---
 
-[Pre-Wedding Albums](./albums)
 ![invitation](../data/invitation.jpg)
 

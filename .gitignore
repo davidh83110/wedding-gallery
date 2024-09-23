@@ -3,7 +3,8 @@ package-lock.json
 .hugo_build.lock
 exampleSite/assets/jsconfig.json
 public/
-resources/
+resources/** 
+resources/_gen/
 .hugo_build.lock
 .DS_Store
 **/.DS_Store
