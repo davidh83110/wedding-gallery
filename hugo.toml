@@ -8,7 +8,7 @@ defaultContentLanguage = "en"
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 timeZone = "Asia/Taipei"
-timeout = "360s"
+timeout = "900s"
 
 [params]
   defaultTheme = "light"
