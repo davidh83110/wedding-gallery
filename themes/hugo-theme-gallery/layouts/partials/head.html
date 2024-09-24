@@ -32,4 +32,10 @@
   {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
   {{- partial "head-custom.html" . -}}
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
 </head>

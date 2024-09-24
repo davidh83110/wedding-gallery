@@ -8,19 +8,36 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+<!-- <div class="wrap">
+  <hgroup>
+    <h1>The Wedding</h1>
+  </hgroup>
+  <h1>Countdown to <strong>Dec 28</strong></h1>
+  <div class="countdown">
+    <div class="bloc-time months">
+      <span class="figure" id="months">0</span>
+      <span class="count-title">M</span>
+    </div>
+    <div class="bloc-time days">
+      <span class="figure" id="days">0</span>
+      <span class="count-title">D</span>
+    </div>
+  </div>
+</div> -->
+
 <div class="wrap">
   <hgroup>
     <h1>The Wedding</h1>
   </hgroup>
-  <h1>Countdown to <strong>DEC 28</strong></h1>
+  <h1>See you on <strong>Dec 28</strong></h1>
   <div class="countdown">
     <div class="bloc-time months">
-      <span class="count-title">Month</span>
       <span class="figure" id="months">0</span>
+      <span class="count-title">MONTHS</span>
     </div>
     <div class="bloc-time days">
-      <span class="count-title">Day</span>
       <span class="figure" id="days">0</span>
+      <span class="count-title">DAYS</span>
     </div>
   </div>
 </div>
@@ -41,6 +58,26 @@
   .bloc-time {
     margin: 0 15px;
   }
+
+.countdown .bloc-time {
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.countdown .figure {
+  font-size: 48px; /* 調整數字大小 */
+  display: block;
+  line-height: 1; /* 緊湊的行高 */
+}
+
+.count-title {
+  font-size: 12px; /* 調整文字大小，變成小文字 */
+  display: block;  /* 讓文字換行到數字下面 */
+  margin-top: 2px; /* 減少文字與數字之間的距離 */
+  line-height: 1; /* 進一步減少文字與數字的距離 */
+}
+
 </style>
 
 
@@ -76,8 +113,8 @@
   <div style="display: inline-block; margin: 0 10px;">
     <div id="calendar-invite">
       <!-- <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NTR2NGFvM3ZmZ3Fna2xmcDlwMGRwY2psaTcgZGF2aWRoODMxMTBAbQ&amp;tmsrc=davidh83110%40gmail.com" target="_blank"> -->
-        <a href="data/david_lily_wedding.ics" target="_blank">
-        <i class="fas fa-calendar"></i> +Calendar 
+        <a href="/data/david_lily_wedding.ics" target="_blank">
+        <i class="fas fa-calendar"></i> + Calendar 
       </a>
     </div>
   </div>
@@ -93,7 +130,7 @@
   <div style="display: inline-block; margin: 0 10px;">
     <div id="form-invite">
       <a href="/albums">
-        <i class="fas fa-book"></i> Albums
+        <i class="fa-solid fa-book-open"></i> Albums
       </a>
     </div>
   </div>
