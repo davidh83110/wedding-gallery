@@ -34,7 +34,7 @@ body > header {
     padding-left: 1rem;
     height: 3rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     user-select: none;
 
     font-family: "Nanum Pen Script", cursive;
@@ -169,7 +169,7 @@ main > section {
   background-attachment: fixed;
   /* This keeps the background image fixed in place while scrolling */
   color: var(--text-1);
-  background-size: 47%;
+  background-size: 40%;
   background-position-x: center;
   background-position-y: 65%;
 }
