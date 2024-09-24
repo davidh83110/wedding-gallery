@@ -5,6 +5,150 @@
   {{ partial "head.html" . }}
   <body>
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="wrap">
+  <hgroup>
+    <h1>The Wedding</h1>
+  </hgroup>
+  <h1>Countdown to <strong>DEC 28</strong></h1>
+  <div class="countdown">
+    <div class="bloc-time months">
+      <span class="count-title">Month</span>
+      <span class="figure" id="months">0</span>
+    </div>
+    <div class="bloc-time days">
+      <span class="count-title">Day</span>
+      <span class="figure" id="days">0</span>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .wrap {
+    text-align: center;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+  }
+
+  .bloc-time {
+    margin: 0 15px;
+  }
+</style>
+
+
+<script>
+  function startCountdown() {
+    var targetDate = new Date("Dec 28, 2024 00:00:00").getTime();
+    var countdownInterval = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = targetDate - now;
+
+      var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30)); // 計算月數
+      var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)); // 計算天數
+
+      // 更新 DOM 元素
+      document.getElementById("months").innerHTML = months < 10 ? '0' + months : months; // 格式化數字
+      document.getElementById("days").innerHTML = days < 10 ? '0' + days : days; // 格式化數字
+
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("months").innerHTML = "00";
+        document.getElementById("days").innerHTML = "00";
+      }
+    }, 1000);
+  }
+
+  startCountdown();
+</script>
+
+<hr style="border: none; border-top: 1.5px solid #ffffff; width: 70%; margin: 20px auto;">
+
+
+<div style="text-align: center;">
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="calendar-invite">
+      <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=NjUxZ...完整鏈接" target="_blank">
+        <i class="fas fa-calendar"></i> +Calendar
+      </a>
+    </div>
+  </div>
+
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/gform" target="_blank">
+        <i class="fa fa-feather-pointed"></i> RSVP
+      </a>
+    </div>
+  </div>
+
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/albums">
+        <i class="fas fa-bolt"></i> Albums
+      </a>
+    </div>
+  </div>
+
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/#map-section">
+        <i class="fas fa-map-pin"></i> Location
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+  #calendar-invite a,
+  #form-invite a {
+    text-decoration: none;
+    color: #b09696;
+    /* 按照你的需求改顏色 */
+    position: relative;
+    padding-bottom: 2px;
+    /* 為下劃線留出空間 */
+  }
+
+  #calendar-invite a:hover,
+  #form-invite a:hover {
+    color: #ffffff;
+    /* 鼠標懸停時的顏色 */
+  }
+
+  #calendar-invite a::after,
+  #form-invite a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    /* 下劃線的厚度 */
+    background: #ffffff;
+    /* 下劃線顏色 */
+    transition: width 0.3s;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  #calendar-invite a:hover::after,
+  #form-invite a:hover::after {
+    width: 100%;
+    /* 鼠標懸停時顯示下劃線 */
+  }
+</style>
+
+<!-- ABOVE are countdown and short links -->
+
     <main>
       {{ block "main" . }}{{ end }}
 

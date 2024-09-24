@@ -33,7 +33,7 @@ timeout = "900s"
   section = ["HTML"]
 
 [imaging]
-  quality = 100
+  quality = 90
   resampleFilter = "CatmullRom"
   [imaging.exif]
     disableDate = false

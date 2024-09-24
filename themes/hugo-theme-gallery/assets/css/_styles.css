@@ -169,9 +169,9 @@ main > section {
   background-attachment: fixed;
   /* This keeps the background image fixed in place while scrolling */
   color: var(--text-1);
-  background-size: 45%;
+  background-size: 47%;
   background-position-x: center;
-  background-position-y: 90%;
+  background-position-y: 65%;
 }
 
 section.galleries {
