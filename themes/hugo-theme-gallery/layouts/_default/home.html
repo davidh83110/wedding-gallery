@@ -5,6 +5,24 @@
 
   {{ .Content }}
 
+
+{{ $image := resources.Get "images/the_date.PNG" }}
+{{ $resized := $image.Fit "2400x2400" }} <!-- 將圖片調整為 800x600 -->
+<img src="{{ $resized.RelPermalink }}" alt="The Date">
+
+{{ $image := resources.Get "images/invitation.PNG" }}
+{{ $resized := $image.Fit "2400x2400" }} <!-- 將圖片調整為 800x600 -->
+<img src="{{ $resized.RelPermalink }}" alt="The Date">
+
+{{ $image := resources.Get "images/event_calendar.PNG" }}
+{{ $resized := $image.Fit "1800x1800" }} <!-- 將圖片調整為 800x600 -->
+<img src="{{ $resized.RelPermalink }}" alt="The Date">
+
+{{ $image := resources.Get "images/clips.PNG" }}
+{{ $resized := $image.Fit "2600x2600" }} <!-- 將圖片調整為 800x600 -->
+<img src="{{ $resized.RelPermalink }}" alt="The Date">
+
+
 <div id="map-section" style="text-align: center;">
   <div class="iframe-container-map">
     <iframe

@@ -9,6 +9,7 @@ disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
 timeZone = "Asia/Taipei"
 timeout = "900s"
+googleAnalytics = "G-MCMWW0GPQ6"
 
 [params]
   defaultTheme = "light"

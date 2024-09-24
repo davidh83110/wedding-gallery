@@ -303,7 +303,7 @@
       };
     };
 
-    //based on http://modernjavascript.blogspot.de/2013/08/building-better-debounce.html
+    //based on https://modernjavascript.blogspot.de/2013/08/building-better-debounce.html
     var debounce = function (func) {
       var timeout, timestamp;
       var wait = 99;

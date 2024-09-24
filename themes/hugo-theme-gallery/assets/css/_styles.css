@@ -414,20 +414,26 @@ section.featured {
 
 .iframe-container {
   width: 100%;
-  height: auto;
   overflow: hidden;
+  /* 防止滾動 */
+  padding-bottom: 120px;
+  /* 底部保留空白 */
+  box-sizing: border-box;
+  /* 確保 padding 不影響寬度 */
 }
 
 .iframe-container iframe {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  min-height: 100vh;
   border: 0;
 }
 
 @media (max-width: 768px) {
   .iframe-container iframe {
-    height: 70vh;
-    /* 小屏幕上使用 70% 視口高度 */
+    height: 250vh;
+    /* 小屏幕上仍使用 100% 視口高度 */
+    min-height: 200vh;
   }
 }
 

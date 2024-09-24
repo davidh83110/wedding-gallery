@@ -10,7 +10,3 @@ menus:
 # sub-galleries on list pages are sorted by date and weight (descending)
 
 ---
-![the_date](data/the_date.PNG)
-![invitation](data/invitation.PNG)
-![event_calendar](data/event_calendar.PNG)
-![clips](data/clips.PNG)
