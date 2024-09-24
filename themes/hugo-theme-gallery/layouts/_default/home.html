@@ -7,7 +7,7 @@
 
 
 {{ $image := resources.Get "images/the_date.PNG" }}
-{{ $resized := $image.Fit "1400x1400" }}
+{{ $resized := $image.Fit "1000x1000" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date">
 
 {{ $image := resources.Get "images/invitation.PNG" }}
