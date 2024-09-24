@@ -5,13 +5,48 @@
 
   {{ .Content }}
 
-
 {{ $image := resources.Get "images/the_date.PNG" }}
-{{ $resized := $image.Fit "1000x1000" }}
+{{ $resized := $image.Resize "787x1400" }}
+<div style="display: flex; justify-content: center;">
+  <img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+</div>
+
+{{ $image := resources.Get "images/invitation.PNG" }}
+{{ $resized := $image.Resize "787x1400" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+{{ $image := resources.Get "images/event_calendar.PNG" }}
+{{ $resized := $image.Resize "787x1400" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+{{ $image := resources.Get "images/clips.PNG" }}
+{{ $resized := $image.Resize "1075x1075" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+
+
+<!-- {{ $image := resources.Get "images/the_date.PNG" }}
+{{ $resized := $image.Resize "787x1400" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+{{ $image := resources.Get "images/invitation.PNG" }}
+{{ $resized := $image.Resize "787x1400" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+{{ $image := resources.Get "images/event_calendar.PNG" }}
+{{ $resized := $image.Resize "787x1400" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;">
+
+{{ $image := resources.Get "images/clips.PNG" }}
+{{ $resized := $image.Resize "1075x1075" }}
+<img src="{{ $resized.RelPermalink }}" alt="The Date" loading="lazy" style="width: 100%; height: auto;"> -->
+
+<!-- {{ $image := resources.Get "images/the_date.PNG" }}
+{{ $resized := $image.Fit "1400x1400" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date">
 
 {{ $image := resources.Get "images/invitation.PNG" }}
-{{ $resized := $image.Fit "2400x2400" }}
+{{ $resized := $image.Fit "1400x1400" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date">
 
 {{ $image := resources.Get "images/event_calendar.PNG" }}
@@ -20,7 +55,7 @@
 
 {{ $image := resources.Get "images/clips.PNG" }}
 {{ $resized := $image.Fit "2600x2600" }}
-<img src="{{ $resized.RelPermalink }}" alt="The Date">
+<img src="{{ $resized.RelPermalink }}" alt="The Date"> -->
 
 
 <div id="map-section" style="text-align: center;">
