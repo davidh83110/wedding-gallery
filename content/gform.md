@@ -1,5 +1,5 @@
 ---
-title: Are You Coming?
+title: Welcome to David & Lily's Wedding
 rss_ignore: true
 layout: gforms
 # menu:
@@ -7,7 +7,7 @@ layout: gforms
 #     weight: 2
 menus:
   main:
-    name: ARE YOU COMING?
+    name: RSVP
     weight: 1
 ---
 
