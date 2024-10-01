@@ -37,8 +37,9 @@ body > header {
     font-size: 1.5rem;
     user-select: none;
 
-    font-family: "Nanum Pen Script", cursive;
-    font-weight: 400;
+    /* font-family: "Nanum Pen Script", cursive; */
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 800;
     font-style: normal;
   }
 

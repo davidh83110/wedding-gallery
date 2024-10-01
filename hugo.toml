@@ -2,7 +2,7 @@
 
 baseURL = 'https://wedding.davidh83110.com/'
 languageCode = 'en-us'
-title = 'David and Lily'
+title = "David and Lily's Wedding"
 copyright = "©David&Lily"
 defaultContentLanguage = "en"
 disableKinds = ["taxonomy", "term"]
