@@ -1,5 +1,5 @@
 ---
-title: Welcome to David & Lily's Wedding
+# title: DAVID & LILY
 rss_ignore: true
 layout: gforms
 # menu:
