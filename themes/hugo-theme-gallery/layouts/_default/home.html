@@ -11,7 +11,7 @@
 
 <br>
 <br>
-{{ $image := resources.Get "images/resized/IMG_4246.PNG" }}
+{{ $image := resources.Get "images/resized/IMG_4246.jpg" }}
 {{ $resized := $image.Resize "1075x1912" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date" style="margin-top: 0; margin-bottom: 0;">
 <br>
@@ -22,7 +22,7 @@
 <br>
 <!-- <img src="/data/invitation_new.png" alt="The Date" style="margin-top: 0; margin-bottom: 0;"> -->
 
-{{ $image := resources.Get "images/IMG_4316.PNG" }}
+{{ $image := resources.Get "images/resized/IMG_4316.jpg" }}
 {{ $resized := $image.Resize "1075x1912" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date" style="margin-top: 0; margin-bottom: 0;">
 
@@ -34,7 +34,7 @@
 
 <br>
 
-<hgroup style="display: block; margin: 3rem auto 0rem">
+<hgroup id="map-section" style="display: block; margin: 3rem auto 0rem">
   <h2 style="font-family: DM Serif Display, serif; color: #fff9f2; font-weight: 400; font-size: 1.5rem;">MAP</h2>
 
   <hr style="border: none; border-top: 0.1px solid #fff9f2; width: 20%; margin: 2px auto;">
