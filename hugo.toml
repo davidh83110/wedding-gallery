@@ -13,8 +13,8 @@ googleAnalytics = "G-MCMWW0GPQ6"
 
 [params]
   defaultTheme = "light"
-  # description = "Example site for hugo-theme-gallery"
-  # title = "My Gallery"
+  description = "WELCOME TO OUR WEDDING! 誠摯邀請您參加我們的婚禮！"
+  title = "David and Lily | 2024 DEC 28"
   [params.author]
     email = "davidh83110@gmail.com"
     name = "David and Lily"
