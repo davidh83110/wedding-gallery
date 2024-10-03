@@ -456,3 +456,74 @@ section.featured {
   height: 100%;
   border: 0;
 }
+
+
+.hover-image {
+  transition: transform 0.3s ease; /* 添加平滑的過渡效果 */
+}
+
+.hover-image:hover {
+  transform: scale(1); /* 當鼠標懸停時，圖片會放大 */
+}
+
+.hover-image {
+  transition: filter 0.3s ease;
+}
+
+.hover-image:hover {
+  filter: brightness(1.2); /* 鼠標懸停時圖片變亮 */
+}
+
+.hover-image {
+  transition: filter 0.3s ease;
+}
+
+.hover-image:hover {
+  filter: brightness(1.8); /* 鼠標懸停時圖片變暗 */
+}
+
+.hover-image {
+  transition: opacity 0.3s ease;
+}
+
+.hover-image:hover {
+  opacity: 0.7; /* 鼠標懸停時圖片變得透明 */
+}
+
+/* 圖片的容器 */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 圖片本身 */
+.hover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease; /* 圖片變暗的過渡效果 */
+}
+
+/* 懸停時圖片變暗 */
+.image-container:hover .hover-image {
+  filter: brightness(0.5); /* 讓圖片變暗 */
+}
+
+/* 懸停時顯示的文字 */
+.hover-text {
+  position: absolute;
+  top: 50%;                /* 將文字垂直居中 */
+  left: 50%;               /* 將文字水平居中 */
+  transform: translate(-50%, -50%); /* 修正居中的位置 */
+  font-size: 15px;         /* 文字大小 */
+  text-align: center;      /* 文字對齊 */
+  opacity: 0;              /* 預設不顯示 */
+  transition: opacity 0.3s ease; /* 平滑顯示文字的效果 */
+  font-family: Karla, sans-serif; 
+  color: #fff9f2; 
+}
+
+/* 當懸停時顯示文字 */
+.image-link:hover .hover-text {
+  opacity: 1;              /* 文字顯示 */
+}
