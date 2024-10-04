@@ -456,38 +456,11 @@ section.featured {
   height: 100%;
   border: 0;
 }
-
-
-.hover-image {
-  transition: transform 0.3s ease; /* 添加平滑的過渡效果 */
-}
-
-.hover-image:hover {
-  transform: scale(1); /* 當鼠標懸停時，圖片會放大 */
-}
-
-.hover-image {
-  transition: filter 0.3s ease;
-}
-
-.hover-image:hover {
-  filter: brightness(1.2); /* 鼠標懸停時圖片變亮 */
-}
-
-.hover-image {
-  transition: filter 0.3s ease;
-}
-
-.hover-image:hover {
-  filter: brightness(1.8); /* 鼠標懸停時圖片變暗 */
-}
-
-.hover-image {
-  transition: opacity 0.3s ease;
-}
-
-.hover-image:hover {
-  opacity: 0.7; /* 鼠標懸停時圖片變得透明 */
+/* 超連結的容器 */
+.image-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* 圖片的容器 */
@@ -496,20 +469,16 @@ section.featured {
   display: inline-block;
 }
 
-/* 圖片本身 */
+/* 初始狀態：圖片是暗的 */
 .hover-image {
   display: block;
   width: 100%;
   height: auto;
-  transition: filter 0.3s ease; /* 圖片變暗的過渡效果 */
+  filter: brightness(0.6); /* 初始狀態為暗的 */
+  transition: filter 0.5s ease, opacity 0.5s ease; /* 圖片變亮及透明度的過渡效果 */
 }
 
-/* 懸停時圖片變暗 */
-.image-container:hover .hover-image {
-  filter: brightness(0.5); /* 讓圖片變暗 */
-}
-
-/* 懸停時顯示的文字 */
+/* 初始顯示文字 */
 .hover-text {
   position: absolute;
   top: 50%;                /* 將文字垂直居中 */
@@ -523,7 +492,20 @@ section.featured {
   color: #fff9f2; 
 }
 
-/* 當懸停時顯示文字 */
-.image-link:hover .hover-text {
-  opacity: 1;              /* 文字顯示 */
+/* 當元素在視口中且2秒後應用亮的效果 */
+.image-container.active .hover-image {
+  filter: brightness(1); /* 恢復到正常亮度 */
+}
+
+.image-container.active .hover-text {
+  opacity: 0; /* 隱藏文字 */
+}
+
+/* 當鼠標懸停時，圖片變暗，並顯示文字 */
+.image-container:hover .hover-image {
+  filter: brightness(0.6); /* 鼠標懸停時變暗 */
+}
+
+.image-container:hover .hover-text {
+  opacity: 1; /* 鼠標懸停時顯示文字 */
 }

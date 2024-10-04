@@ -52,6 +52,30 @@
 </hgroup>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 延遲 2 秒後才應用 'active' 類來變亮並隱藏文字
+        setTimeout(() => {
+          entry.target.classList.add('active');
+        }, 1400); // 2 秒延遲
+      } else {
+        // 當元素不在視口中時移除 'active' 類，這樣可以重複觸發效果
+        entry.target.classList.remove('active');
+      }
+    });
+  });
+
+  // 監測所有 .image-container 元素
+  const imageContainers = document.querySelectorAll('.image-container');
+  imageContainers.forEach(container => {
+    observer.observe(container);
+  });
+});
+</script>
+
 {{ $image := resources.Get "images/map_v3.png" }}
 {{ $resized := $image.Resize "1552x948" }}
 <a href="https://maps.app.goo.gl/o1GqdYLSMPibKtHw6" target="_blank" class="image-link">

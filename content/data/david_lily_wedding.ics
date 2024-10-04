@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 CALSCALE:GREGORIAN
 VERSION:2.0
-X-WR-CALNAME:David and Lily Wedding
+X-WR-CALNAME:David and Lily's Wedding
 METHOD:PUBLISH
 PRODID:-//Apple Inc.//macOS 14.6//EN
 BEGIN:VTIMEZONE
@@ -64,7 +64,7 @@ DTEND;TZID=Asia/Taipei:20241228T150000
 UID:54v4ao3vfgqgklfp9p0dpcjli7@google.com
 DTSTAMP:20240924T034122Z
 LOCATION:Renaissance Taipei Shihlin Hotel\, 11141台灣台北市士林區中山北路五段470巷8號
-DESCRIPTION:歡迎來參加 David and Lily 的婚禮！\n\n地點：台北士林萬麗酒店二樓\n日期： 2024/12/28 \
+DESCRIPTION:歡迎來參加我們的婚禮！\n\n地點：台北士林萬麗酒店二樓\n日期：2024/12/28 \
  n時間：12:00 雞尾酒會 / 12:30 準時開席
 URL;VALUE=URI:https://wedding.davidh83110.com
 STATUS:CONFIRMED
