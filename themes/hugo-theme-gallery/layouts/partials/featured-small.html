@@ -1,0 +1,77 @@
+<style>
+  .featured-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 确保在较小屏幕上自动换行 */
+  }
+
+  .featured-card {
+    width: 48%; /* 确保两个 album 能够并排显示，调整百分比可以控制大小 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    background-size: cover;
+    background-position: center;
+    /* padding: 20px; */
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+ .featured-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content stays at the bottom */
+    align-items: center; /* Center the text horizontally */
+    gap: 0; /* Remove gap between title and photo count */
+    background-image: linear-gradient(to top, RGB(0 0 0 / .8) 10%, transparent 50%);
+    padding: 1.1rem;
+    width: 100%;
+    height: 100%;
+}
+
+  .featured-card:hover {
+    transform: scale(1.05); /* 鼠标悬停时的放大效果 */
+  }
+
+.featured h2 {
+    color: white;
+    font-size: 2rem; /* Adjust to preferred size */
+    margin: 0;
+    text-align: center; /* Center the title */
+}
+
+.featured p {
+    display: none; /* Remove the photo count */
+}
+
+/* Optional - To make sure the title looks centered within the card */
+.featured-card a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align title at the bottom */
+    height: 100%;
+}
+</style>
+
+<section class="featured-section">
+  {{ range where site.Pages.ByDate.Reverse "Params.featured" "=" true | first 5 }}
+  {{ $gallery := partial "get-gallery.html" . }}
+  {{ if $gallery }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images 0) }}
+  {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+  {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
+  <a class="featured-card" href="{{ .RelPermalink }}"
+    style="background-color: {{ $color }}; background-image: url({{ $thumbnail.RelPermalink }});">
+    <div>
+      <h2 style="font-size: 80%;">{{ .Title }}</h2>
+    </div>
+  </a>
+  {{ end }}
+  {{ end }}
+</section>

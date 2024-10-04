@@ -114,65 +114,110 @@
 <div style="text-align: center;">
   <div style="display: inline-block; margin: 0 10px;">
     <div id="calendar-invite">
-      <!-- <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NTR2NGFvM3ZmZ3Fna2xmcDlwMGRwY2psaTcgZGF2aWRoODMxMTBAbQ&amp;tmsrc=davidh83110%40gmail.com" target="_blank"> -->
-        <a href="/data/david_lily_wedding.ics" target="_blank">
-        <i class="fas fa-calendar"></i> + Calendar 
+      <a href="/data/david_lily_wedding.ics" target="_blank" style="display: flex; align-items: center;">
+        <i class="fas fa-calendar" style="font-size: 18px; margin-right: 8px;"></i>
+        <div style="display: flex; flex-direction: column; text-align: left; font-size: 13px;">
+          <span>加入行事曆</span>
+          <span style="font-size: 0.7rem;">+ Calendar</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/gform" target="_blank" style="display: flex; align-items: center;">
+        <i class="fa fa-feather-pointed" style="font-size: 18px; margin-right: 8px;"></i> RSVP
+      </a>
+    </div>
+  </div> -->
+
+
+
+  <!-- <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/albums" target="_blank" style="display: flex; align-items: center;">
+        <i class="fa-solid fa-book-open" style="font-size: 18px; margin-right: 8px;"></i> Albums
+      </a>
+    </div>
+  </div> -->
+
+  <!-- <div style="display: inline-block; margin: 0 10px;">
+    <div id="form-invite">
+      <a href="/#map-section" style="display: flex; align-items: center;">
+        <i class="fas fa-map-pin" style="font-size: 18px; margin-right: 8px;"></i> Location
+      </a>
+    </div>
+  </div> -->
+
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="location">
+      <a href="/#map-section" style="display: flex; align-items: center;">
+        <i class="fas fa-map-pin" style="font-size: 18px; margin-right: 8px;"></i>
+        <div style="display: flex; flex-direction: column; text-align: left; font-size: 13px;">
+          <span>地點</span>
+          <span style="font-size: 0.7rem;">Location</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div style="display: inline-block; margin: 0 10px;">
+    <div id="albums">
+      <a href="/#photos" style="display: flex; align-items: center;">
+        <i class="fa-solid fa-book-open" style="font-size: 18px; margin-right: 8px;"></i>
+        <div style="display: flex; flex-direction: column; text-align: left; font-size: 13px;">
+          <span>相簿</span>
+          <span style="font-size: 0.7rem;">Albums</span>
+        </div>
       </a>
     </div>
   </div>
 
   <div style="display: inline-block; margin: 0 10px;">
     <div id="form-invite">
-      <a href="/gform" target="_blank">
-        <i class="fa fa-feather-pointed"></i> RSVP  
-      </a>
-    </div>
-  </div>
-
-  <div style="display: inline-block; margin: 0 10px;">
-    <div id="form-invite">
-      <a href="/albums">
-        <i class="fa-solid fa-book-open"></i> Albums
-      </a>
-    </div>
-  </div>
-
-  <div style="display: inline-block; margin: 0 10px;">
-    <div id="form-invite">
-      <a href="/#map-section">
-        <i class="fas fa-map-pin"></i> Location
+      <a href="/#rsvp" style="display: flex; align-items: center;">
+        <i class="fa fa-feather-pointed" style="font-size: 18px; margin-right: 8px;"></i>
+        <div style="display: flex; flex-direction: column; text-align: left; font-size: 13px;">
+          <span>填寫表單</span>
+          <span style="font-size: 0.7rem;">RSVP</span>
+        </div>
       </a>
     </div>
   </div>
 
 </div>
 
-
 <style>
   #calendar-invite a,
-  #form-invite a {
+  #form-invite a,
+  #albums a,
+  #location a {
     text-decoration: none;
     color: #b09696;
-    /* 按照你的需求改顏色 */
+    font-size: 14px;
+    /* 調整文字大小 */
     position: relative;
     padding-bottom: 2px;
-    /* 為下劃線留出空間 */
+    display: flex;
+    align-items: center;
   }
 
   #calendar-invite a:hover,
-  #form-invite a:hover {
+  #form-invite a:hover,
+  #albums a:hover,
+  #location a:hover {
     color: #ffffff;
-    /* 鼠標懸停時的顏色 */
   }
 
   #calendar-invite a::after,
-  #form-invite a::after {
+  #form-invite a::after,
+  #albums a::after,
+  #location a:after {
     content: '';
     display: block;
     height: 2px;
-    /* 下劃線的厚度 */
     background: #ffffff;
-    /* 下劃線顏色 */
     transition: width 0.3s;
     width: 0;
     position: absolute;
@@ -181,11 +226,13 @@
   }
 
   #calendar-invite a:hover::after,
-  #form-invite a:hover::after {
+  #form-invite a:hover::after,
+  #albums a:hover::after,
+  #location a:hover::after  {
     width: 100%;
-    /* 鼠標懸停時顯示下劃線 */
   }
 </style>
+
 
 <!-- ABOVE are countdown and short links -->
 

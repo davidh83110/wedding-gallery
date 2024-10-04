@@ -80,10 +80,163 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ $resized := $image.Resize "1552x948" }}
 <a href="https://maps.app.goo.gl/o1GqdYLSMPibKtHw6" target="_blank" class="image-link">
   <div class="image-container">
-    <img src="{{ $resized.RelPermalink }}" alt="The Date" class="hover-image">
+    <img src="{{ $resized.RelPermalink }}" alt="The Date" class="hover-image" style="margin: 0 0;">
     <div class="hover-text">OPEN GOOGLE MAPS</div>
   </div>
 </a>
+
+<br>
+<br>
+
+<hgroup id="photos" style="display: block; margin: 3rem auto 0rem">
+  <h2 style="font-family: DM Serif Display, serif; color: #fff9f2; font-weight: 400; font-size: 1.4rem;">Pre-Wedding
+    Photos</h2>
+
+  <hr style="border: none; border-top: 0.1px solid #fff9f2; width: 20%; margin: 2px auto;">
+</hgroup>
+
+<br>
+
+{{ partial "featured-small.html" . }}
+<section class="galleries">
+  {{ range where .Pages "Params.private" "ne" true }}
+  {{ partial "album-card.html" . }}
+  {{ end }}
+</section>
+
+
+<br>
+
+
+<!-- <style>
+  /* 按鈕樣式 */
+  .open-form-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    /* 按鈕背景顏色 */
+    color: white;
+    /* 字體顏色 */
+    border: none;
+    /* 去掉邊框 */
+    border-radius: 5px;
+    /* 邊角圓滑 */
+    cursor: pointer;
+    /* 鼠標懸停時顯示手型 */
+    text-decoration: none;
+    /* 去掉下劃線 */
+    font-size: 16px;
+    /* 字體大小 */
+    display: inline-block;
+    /* 使其在行內顯示 */
+  }
+
+  .open-form-btn:hover {
+    background-color: #0056b3;
+    /* 鼠標懸停時顏色 */
+  }
+</style> -->
+
+
+<hgroup id="rsvp" style="display: block; margin: 3rem auto 0rem">
+  <h2 style="font-family: DM Serif Display, serif; color: #fff9f2; font-weight: 400; font-size: 1.4rem;">RSVP</h2>
+  <hr style="border: none; border-top: 0.1px solid #fff9f2; width: 20%; margin: 2px auto;">
+</hgroup>
+
+<section class="prose">
+  <div class="iframe-container">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfcP8RhQKs1Xg3-VDS2tYlI8NI1C5T5GOpsKAAOTxg2I4945w/viewform?embedded=true"
+      frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+  </div>
+</section>
+
+
+<!-- 彈出窗口 -->
+<!-- <div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="iframe-container">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfcP8RhQKs1Xg3-VDS2tYlI8NI1C5T5GOpsKAAOTxg2I4945w/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    </div>
+  </div>
+</div> -->
+
+<!-- <style>
+.modal {
+    display: none; /* 預設為隱藏 */
+    position: fixed; /* 固定位置 */
+    z-index: 1000; /* 顯示在最上層 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全寬 */
+    height: 100%; /* 全高 */
+    overflow: auto; /* 如果需要的話，啟用滾動 */
+    background-color: rgba(0, 0, 0, 0.8); /* 黑色背景，帶透明度 */
+}
+
+.modal-content {
+    position: absolute; /* 改成絕對定位 */
+    top: 0; /* 從頂部開始 */
+    left: 0; /* 從左側開始 */
+    width: 80%; /* 可根據需要調整寬度 */
+    height: 80%; /* 可根據需要調整高度 */
+    background-color: white; /* 背景顏色 */
+    padding: 0; /* 去掉內邊距 */
+    border: 1px solid #ccc; /* 細邊框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
+    overflow: hidden; /* 禁止滾動條出現 */
+}
+
+.iframe-container {
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* 去掉iframe的邊框 */
+    overflow: hidden; /* 禁止 iframe 自身的滾動條 */
+}
+
+</style> -->
+
+<!-- 按鈕來觸發彈出窗口 -->
+<!-- <button id="openModal">打開彈出窗口</button> -->
+
+<!-- 彈出窗口 -->
+<!-- <div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="iframe-container">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfcP8RhQKs1Xg3-VDS2tYlI8NI1C5T5GOpsKAAOTxg2I4945w/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    </div>
+  </div>
+</div> -->
+
+<!-- <script>
+  // JavaScript 來處理彈出窗口的功能
+  document.addEventListener("DOMContentLoaded", function () {
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openModal");
+
+    // 當按鈕被點擊時，顯示彈出窗口
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // 當用戶點擊彈出窗口外部時，關閉彈出窗口
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script> -->
+
+
 
 
 <!-- <div id="map-section" style="text-align: center;">
