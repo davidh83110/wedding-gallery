@@ -13,7 +13,7 @@ googleAnalytics = "G-MCMWW0GPQ6"
 
 [params]
   defaultTheme = "light"
-  description = "WELCOME TO OUR WEDDING! 誠摯邀請您參加我們的婚禮！"
+  description = "WELCOME TO OUR WEDDING! 誠摯邀請你參加我們的婚禮！"
   title = "David and Lily | 2024 DEC 28"
   [params.author]
     email = "davidh83110@gmail.com"

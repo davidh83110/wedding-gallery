@@ -22,7 +22,7 @@
 <br>
 <!-- <img src="/data/invitation_new.png" alt="The Date" style="margin-top: 0; margin-bottom: 0;"> -->
 
-{{ $image := resources.Get "images/resized/IMG_4316.jpg" }}
+{{ $image := resources.Get "images/resized/IMG_4327.jpg" }}
 {{ $resized := $image.Resize "1075x1912" }}
 <img src="{{ $resized.RelPermalink }}" alt="The Date" style="margin-top: 0; margin-bottom: 0;">
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 延遲 2 秒後才應用 'active' 類來變亮並隱藏文字
         setTimeout(() => {
           entry.target.classList.add('active');
-        }, 2600); // 2 秒延遲
+        }, 3000); // 2 秒延遲
       } else {
         // 當元素不在視口中時移除 'active' 類，這樣可以重複觸發效果
         entry.target.classList.remove('active');
