@@ -486,7 +486,7 @@ section.featured {
   transform: translate(-50%, -50%); /* 修正居中的位置 */
   font-size: 15px;         /* 文字大小 */
   text-align: center;      /* 文字對齊 */
-  opacity: 0;              /* 預設不顯示 */
+  opacity: 1;              /* 預設不顯示 */
   transition: opacity 0.3s ease; /* 平滑顯示文字的效果 */
   font-family: Karla, sans-serif; 
   color: #fff9f2; 
