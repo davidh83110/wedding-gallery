@@ -6,9 +6,9 @@ type: gallery
 date: 2024-02-22T13:00:00+00:00
 menus: "main"
 weight: 4
-featured_image: "_S6A8204.jpg"
+featured_image: "_S6A8201.jpg"
 resources:
-  - src: "_S6A8204.jpg"
+  - src: "_S6A8201.jpg"
     params:
       date: 2024-02-18T13:04:30+0100
 
