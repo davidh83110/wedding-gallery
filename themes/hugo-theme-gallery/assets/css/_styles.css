@@ -412,28 +412,7 @@ section.featured {
   }
 }
 
-.iframe-container {
-  width: 100%;
-  overflow: hidden;
-  /* 防止滾動 */
-  box-sizing: border-box;
-  /* 確保 padding 不影響寬度 */
-}
 
-.iframe-container iframe {
-  width: 100%;
-  height: 250vh;
-  /* min-height: 130vh; */
-  border: 0;
-}
-
-@media (max-width: 768px) {
-  .iframe-container iframe {
-    height: 350vh;
-    /* 小屏幕上仍使用 100% 視口高度 */
-    min-height: 350vh;
-  }
-}
 
 .iframe-container-map {
   position: relative;
