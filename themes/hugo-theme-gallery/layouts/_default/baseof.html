@@ -33,13 +33,21 @@
   </a>
   <h1>See you on <strong>Dec 28</strong></h1>
   <div class="countdown">
-    <div class="bloc-time months">
-      <span class="figure" id="months">0</span>
-      <span class="count-title">MONTHS</span>
-    </div>
     <div class="bloc-time days">
-      <span class="figure" id="days">0</span>
+      <span class="figure" id="days">00</span>
       <span class="count-title">DAYS</span>
+    </div>
+    <div class="bloc-time hours">
+      <span class="figure" id="hours">00</span>
+      <span class="count-title">HOURS</span>
+    </div>
+    <div class="bloc-time minutes">
+      <span class="figure" id="minutes">00</span>
+      <span class="count-title">MINUTES</span>
+    </div>
+    <div class="bloc-time seconds">
+      <span class="figure" id="seconds">00</span>
+      <span class="count-title">SECONDS</span>
     </div>
   </div>
 </div>
@@ -68,13 +76,14 @@
 }
 
 .countdown .figure {
-  font-size: 48px; /* 調整數字大小 */
+  font-size: 33px; /* 調整數字大小 */
   display: block;
   line-height: 1; /* 緊湊的行高 */
+  padding-top: 0.4rem;
 }
 
 .count-title {
-  font-size: 12px; /* 調整文字大小，變成小文字 */
+  font-size: 9.2px; /* 調整文字大小，變成小文字 */
   display: block;  /* 讓文字換行到數字下面 */
   margin-top: 2px; /* 減少文字與數字之間的距離 */
   line-height: 1; /* 進一步減少文字與數字的距離 */
@@ -85,27 +94,37 @@
 
 <script>
   function startCountdown() {
-    var targetDate = new Date("Dec 28, 2024 00:00:00").getTime();
+    var targetDate = new Date("DEC 28, 2024 12:00:00").getTime();
+
     var countdownInterval = setInterval(function () {
       var now = new Date().getTime();
       var distance = targetDate - now;
 
-      var months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30)); // 計算月數
-      var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)); // 計算天數
+      // 計算天、時、分、秒
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // 更新 DOM 元素
-      document.getElementById("months").innerHTML = months < 10 ? '0' + months : months; // 格式化數字
-      document.getElementById("days").innerHTML = days < 10 ? '0' + days : days; // 格式化數字
+      document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+      document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
 
+      // 如果時間到了，停止倒數
       if (distance < 0) {
         clearInterval(countdownInterval);
-        document.getElementById("months").innerHTML = "00";
         document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
       }
     }, 1000);
   }
 
   startCountdown();
+
 </script>
 
 <hr style="border: none; border-top: 0.2px solid #fff9f2; width: 70%; margin: 20px auto;">
